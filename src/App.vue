@@ -1,23 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  	<loading v-model="isLoading"></loading>
+  	<!-- <img src="./assets/logo.png"> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import { Loading } from 'vux'
+import { mapState } from 'vuex'
 export default {
-  name: 'app'
+  components: {
+    Loading
+  },
+  name: 'app',
+  computed: {
+    ...mapState({
+      isLoading: state => state.vux.isLoading
+    })
+  },
+  mounted () {
+    // console.log(this.$store.state.vux.isLoading)
+  },
+  data () {
+    return {
+      loading: true
+    }
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less">
+@import '~vux/src/styles/reset.less';
+
+body {
+  background-color: #fbf9fe;
 }
 </style>
