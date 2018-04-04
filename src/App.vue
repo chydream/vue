@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  	<loading v-model="isLoading"></loading>
+  	<loading v-model="loading"></loading>
   	<!-- <img src="./assets/logo.png"> -->
     <router-view></router-view>
   </div>
@@ -21,6 +21,9 @@ export default {
   },
   mounted () {
     // console.log(this.$store.state.vux.isLoading)
+    setTimeout(() => {
+      this.loading = false
+    }, 500)
   },
   data () {
     return {
