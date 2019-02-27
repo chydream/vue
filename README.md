@@ -1,30 +1,26 @@
-# shop
+# vuepress
 
-> shop
-
+> vuepress
+``` bash
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+# 安装
+yarn global add vuepress # 或者：npm install -g vuepress
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 新建一个 markdown 文件
+echo '# Hello VuePress!' > README.md
 
-# build for production with minification
-npm run build
+# 开始写作
+vuepress dev .
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# 构建静态文件
+vuepress build .
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+``` bash
+npm install -g vuepress
+npm run docs:dev
+npm run docs:build
+```
+
+
