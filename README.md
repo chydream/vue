@@ -18,7 +18,6 @@ vuepress build .
 ```
 
 ``` bash
-npm install -g vuepress
 npm run docs:dev
 npm run docs:build
 ```
